@@ -31,7 +31,7 @@ extra-source-files: CHANGELOG.md
 custom-setup
   setup-depends:
     , base   >=4.12.0.0 && <5
-    , Cabal  >=2.4      && <3.9
+    , Cabal  >=2.4      && <3.11
 
 -- If true,  use pkg-config,  otherwise use the pg_config based build
 -- configuration
@@ -67,11 +67,11 @@ library
     Database.PostgreSQL.LibPQ.Oid
 
   build-depends:
-    , base        >=4.12.0.0 && <4.18
+    , base        >=4.12.0.0 && <4.19
     , bytestring  >=0.10.8.2 && <0.12
 
   if !os(windows)
-    build-depends: unix >=2.7.2.2 && <2.8
+    build-depends: unix >=2.7.2.2 && <2.9
 
   if os(windows)
     build-depends: Win32 >=2.2.0.2 && <2.14
